@@ -5,54 +5,51 @@ package sumitYTFramwork;
  *  channel subscribe
  * */
 
+import org.testng.annotations.Test;
 import java.util.List;
-
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TC4
+import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
+
+public class TC4 extends Sumit_YTFrameBaseClass
 {
-	ChromeDriver driver;
-	@BeforeMethod
-	public void browserOpen()
-	{
-		System.setProperty("webdriver.chrome.driver", "/Users/sumitkumar/Downloads/chrom/chromedriver");
-		
-		driver = new ChromeDriver();
-		
-	}
 	
 	@Test
 	public void channelSubscribtion()
 	{
-		driver.navigate().to("http://www.youtube.com/");
+		chroDriver.navigate().to("http://www.youtube.com/");
 		
-		driver.manage().window().maximize();
+		chroDriver.manage().window().maximize();
 		
-		driver.navigate().to("https://www.youtube.com");
-		WebElement signInbutton= driver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
+		chroDriver.navigate().to("https://www.youtube.com");
+		
+		WebElement signInbutton= chroDriver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
+		
 		signInbutton.click();
-		  driver.findElement(By.id("identifierId")).sendKeys("sumit@docquity.com");
-		  driver.findElement(By.id("identifierNext")).click(); 
-		  WebDriverWait	wait = new WebDriverWait(driver, 40);
-		  wait.until(ExpectedConditions.presenceOfElementLocated(By.name("password")));
-		  driver.findElement(By.name("password")).sendKeys("Docquitysumit#8090");
-		  driver.findElement(By.id("passwordNext")).click();
-		  wait.until(ExpectedConditions.presenceOfElementLocated(By.id("video-title")));
-		  List<WebElement > videoClick=	driver.findElements(By.id("video-title"));
-		  videoClick.get(1).click();
+		
+		chroDriver.findElement(By.id("identifierId")).sendKeys("sumit@docquity.com");
+		chroDriver.findElement(By.id("identifierNext")).click(); 
 		  
+
+		chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		chroDriver.findElement(By.name("password")).sendKeys("Docquitysumit#8090");
+		chroDriver.findElement(By.id("passwordNext")).click();
+
+		chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		List<WebElement > videoClick=	chroDriver.findElements(By.id("video-title"));
+		videoClick.get(1).click();
 		  
-		  WebElement subscribeButton = driver.findElement(By.xpath("//*[contains(@aria-label, 'Subscribe to' )][1]"));
+		
+		chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		WebElement subscribeButton = chroDriver.findElement(By.xpath("//*[contains(@aria-label, 'Subscribe to' )][1]"));
 		  
 		  //wait.until(ExpectedConditions.presenceOfElementLocated((By) subscribeButton));
 		  
-		  subscribeButton.click();
+		subscribeButton.click();
 		  
 		  
 	}

@@ -1,6 +1,9 @@
 package sumitYTFramwork;
 
+import org.testng.annotations.Test;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +13,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
+
+import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
 
 /*-- TEST CASE -- 
  * 1. open browser
@@ -23,55 +28,35 @@ import org.testng.annotations.Test;
  * 9. click on subscribe buttton
  * */
 
-public class TC2 
-{
-	ChromeDriver driver; 
-	@BeforeMethod
-	public void browserLaunce ()
-	{
-		System.setProperty("webdriver.chrome.driver", "/Users/sumitkumar/Downloads/chrom/chromedriver");
-		//webdriver.chrome.driver
-		
-		driver = new ChromeDriver();
-	
-	}
-	
+public class TC2  extends Sumit_YTFrameBaseClass
+{	
 	@Test
-	public void clickSubscribeButtonaftersignin()
+	public void clickSubscribeButtonaftersignin() throws InterruptedException
 	{
 		
-			driver.get("http://www.youtube.com/");
-			driver.manage().window().maximize();
+		chroDriver.get("http://www.youtube.com/");
+		chroDriver.manage().window().maximize();
 		
-		  WebElement signInbutton= driver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
+		  WebElement signInbutton= chroDriver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
 		  
 		  signInbutton.click();
 		  
-		  driver.findElement(By.id("identifierId")).sendKeys("sumitk440@gmail.com");
-		  driver.findElement(By.id("identifierNext")).click();
+		  chroDriver.findElement(By.id("identifierId")).sendKeys("sumitk440@gmail.com");
+		  chroDriver.findElement(By.id("identifierNext")).click();
 		  
-		  WebDriverWait wait = new WebDriverWait(driver, 40);
+		  WebDriverWait wait = new WebDriverWait(chroDriver, 40);
 		  
 		  wait.until(ExpectedConditions.presenceOfElementLocated(By.name("password")));
 		  
-		  driver.findElement(By.name("password")).sendKeys("SKumiatr@#170690");
+		  chroDriver.findElement(By.name("password")).sendKeys("SKumiatr@#170690");
 		  
-		  driver.findElement(By.id("passwordNext")).click();
+		  chroDriver.findElement(By.id("passwordNext")).click();
+		  chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 
-		 
-			List<WebElement> all_Subscribe= driver.findElements(By.xpath("//div[@id='subscribe-button' and @class='style-scope ytd-shelf-renderer']"));
+		  chroDriver.findElement(By.xpath("//yt-formatted-string[@class='style-scope ytd-subscribe-button-renderer']")).click();
+			
+		System.out.println("Subscribe button click successfully");
+			
+	}
 	
-			all_Subscribe.get(0).click();
-			
-			
-		
-			
-	}
-	@Ignore
-	//@AfterMethod
-	public void closeBrowser() throws InterruptedException
-	{
-		Thread.sleep(3000);
-		driver.close();
-	}
 }
