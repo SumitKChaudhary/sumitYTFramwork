@@ -1,5 +1,7 @@
 package sumitYTFramwork;
 
+import org.openqa.selenium.By;
+
 /*-- TEST CASE -- 
  * 1. open browser
  * 2. hite the youtube URL in the address bar
@@ -13,45 +15,20 @@ package sumitYTFramwork;
  * */
 
 import org.testng.annotations.Test;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
 
 import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
+import sumitYTFramworkpages.Sumit_YTFLogin;
 
 public class TC1  extends Sumit_YTFrameBaseClass
 {
 	
 	@Test
-	public void singIn() throws InterruptedException
+	public void singinTrending()
 	{
-		WebElement signInbutton= chroDriver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
+		Sumit_YTFLogin singin = new Sumit_YTFLogin(chroDriver);
 		
-		signInbutton.click();
-		
-		chroDriver.findElement(By.id("identifierId")).sendKeys("sumitk440@gmail.com");
-		chroDriver.findElement(By.id("identifierNext")).click();
-        
-		WebDriverWait wait = new WebDriverWait(chroDriver, 40);
-        
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("password"))); 
-        
-        chroDriver.findElement(By.name("password")).sendKeys("SKumiatr@#170690");
-        chroDriver.findElement(By.id("passwordNext")).click();
-       
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Trending"))); 
+		singin.youtubLogin("sumit@docquity.com", "Docquitysumit#8090");
         
 		chroDriver.findElement(By.linkText("Trending")).click();
 		
