@@ -12,6 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
+import sumitYTFramworkpages.Sumit_YTFLogin;
+import sumitYTFramworkpages.Sumit_YTF_VideoPlay;
 
 /* Test Case e
  * Sing in
@@ -23,26 +25,13 @@ public class TC3  extends Sumit_YTFrameBaseClass
 	@Test
 	public void playVideoTest()
 	{
-			chroDriver.navigate().to("https://www.youtube.com");
-			WebElement signInbutton= chroDriver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
-			signInbutton.click();
-			chroDriver.findElement(By.id("identifierId")).sendKeys("sumit@docquity.com");
-			chroDriver.findElement(By.id("identifierNext")).click(); 
-		  		
-			chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		  
-			chroDriver.findElement(By.name("password")).sendKeys("Docquitysumit#8090");
-		  
-			chroDriver.findElement(By.id("passwordNext")).click();
-
-			chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		  
-			List<WebElement > videoClick=	chroDriver.findElements(By.id("video-title"));
-			videoClick.get(1).click();
-        
-        	WebElement likeButton = chroDriver.findElement(By.xpath("//button[contains(@aria-label,'like this video')][1]"));
-        	likeButton.click();
-        	
+			Sumit_YTFLogin  signIn = new Sumit_YTFLogin(chroDriver);
+			
+			signIn.youtubLogin("Sumitk440@gmail.com", "SKumiatr@#170690");
+			
+			Sumit_YTF_VideoPlay video_Play = new Sumit_YTF_VideoPlay(chroDriver);	
+			
+			video_Play.videoPlay();
         
 	}
 

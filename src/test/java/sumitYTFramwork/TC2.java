@@ -15,6 +15,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
+import sumitYTFramworkpages.Sumit_YTFLogin;
 
 /*-- TEST CASE -- 
  * 1. open browser
@@ -34,28 +35,15 @@ public class TC2  extends Sumit_YTFrameBaseClass
 	public void clickSubscribeButtonaftersignin() throws InterruptedException
 	{
 		
-		chroDriver.get("http://www.youtube.com/");
-		chroDriver.manage().window().maximize();
-		
-		  WebElement signInbutton= chroDriver.findElement(By.xpath("(//paper-button[@id='button']/yt-formatted-string)[2]"));
-		  
-		  signInbutton.click();
-		  
-		  chroDriver.findElement(By.id("identifierId")).sendKeys("sumitk440@gmail.com");
-		  chroDriver.findElement(By.id("identifierNext")).click();
-		  
-		  WebDriverWait wait = new WebDriverWait(chroDriver, 40);
-		  
-		  wait.until(ExpectedConditions.presenceOfElementLocated(By.name("password")));
-		  
-		  chroDriver.findElement(By.name("password")).sendKeys("SKumiatr@#170690");
-		  
-		  chroDriver.findElement(By.id("passwordNext")).click();
-		  chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		 
-		  chroDriver.findElement(By.xpath("//yt-formatted-string[@class='style-scope ytd-subscribe-button-renderer']")).click();
 			
-		System.out.println("Subscribe button click successfully");
+			Sumit_YTFLogin signIn = new Sumit_YTFLogin(chroDriver);
+		
+			signIn.youtubLogin("sumitk440@gmail.com", "SKumiatr@#170690");
+		
+			chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			chroDriver.findElement(By.xpath("//yt-formatted-string[@class='style-scope ytd-subscribe-button-renderer'][1]")).click();
+			
+			System.out.println("Subscribe button click successfully");
 			
 	}
 	
