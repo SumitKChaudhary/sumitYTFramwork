@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-05-25T19:47:27Z" name="Default suite" finished-at="2019-05-25T19:47:47Z" duration-ms="20477">
+  <suite started-at="2019-05-29T19:55:26Z" name="Default suite" finished-at="2019-05-29T19:55:42Z" duration-ms="16626">
     <groups>
     </groups>
-    <test started-at="2019-05-25T19:47:27Z" name="Default test" finished-at="2019-05-25T19:47:47Z" duration-ms="20477">
-      <class name="sumitYTFramwork.TC3">
-        <test-method is-config="true" signature="browserLaunce()[pri:0, instance:sumitYTFramwork.TC3@7c1e2a9e]" started-at="2019-05-25T19:47:27Z" name="browserLaunce" finished-at="2019-05-25T19:47:33Z" duration-ms="6403" status="PASS">
+    <test started-at="2019-05-29T19:55:26Z" name="Default test" finished-at="2019-05-29T19:55:42Z" duration-ms="16626">
+      <class name="sumitYTFramwork.TC4">
+        <test-method is-config="true" signature="browserLaunce()[pri:0, instance:sumitYTFramwork.TC4@7c1e2a9e]" started-at="2019-05-29T19:55:26Z" name="browserLaunce" finished-at="2019-05-29T19:55:32Z" duration-ms="6224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunce -->
-        <test-method signature="playVideoTest()[pri:0, instance:sumitYTFramwork.TC3@7c1e2a9e]" started-at="2019-05-25T19:47:33Z" name="playVideoTest" finished-at="2019-05-25T19:47:47Z" duration-ms="13616" status="PASS">
+        <test-method signature="channelSubscribtion()[pri:0, instance:sumitYTFramwork.TC4@7c1e2a9e]" started-at="2019-05-29T19:55:32Z" name="channelSubscribtion" finished-at="2019-05-29T19:55:41Z" duration-ms="9101" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- playVideoTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:sumitYTFramwork.TC3@7c1e2a9e]" started-at="2019-05-25T19:47:47Z" name="closeBrowser" finished-at="2019-05-25T19:47:47Z" duration-ms="430" status="PASS">
+        </test-method> <!-- channelSubscribtion -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:sumitYTFramwork.TC4@7c1e2a9e]" started-at="2019-05-29T19:55:41Z" name="closeBrowser" finished-at="2019-05-29T19:55:42Z" duration-ms="1260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- sumitYTFramwork.TC3 -->
+      </class> <!-- sumitYTFramwork.TC4 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

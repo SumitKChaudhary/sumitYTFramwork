@@ -7,7 +7,7 @@
         <methods>
           <include name="browserLaunce"/>
           <include name="closeBrowser"/>
-          <include name="playVideoTest"/>
+          <include name="likeVideo"/>
         </methods>
       </class> <!-- sumitYTFramwork.TC3 -->
     </classes>
