@@ -1,6 +1,9 @@
 package sumitYTFramworkBase;
 
-import java.util.concurrent.TimeUnit;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,8 +13,9 @@ import org.testng.annotations.Ignore;
 public class Sumit_YTFrameBaseClass
 {
 	public ChromeDriver chroDriver;
+	public Properties pr; 
 	@BeforeMethod
-	public void browserLaunce()
+	public void browserLaunce() throws IOException
 	{
 		System.setProperty("webdriver.chrome.driver", "/Users/sumitkumar/Downloads/chrom/chromedriver");
 		
@@ -19,16 +23,21 @@ public class Sumit_YTFrameBaseClass
 		chroDriver.get("http://www.youtube.com/");
 		chroDriver.manage().window().maximize();
 		
+		File objectRepository_file = new File("../YTFramework/SumitYTFram_ObjectRepo.properties");
+		FileInputStream fileInput = new FileInputStream(objectRepository_file);
+		
+		pr = new Properties();
+		
+		pr.load(fileInput);
+		
 	}
 	//@Ignore
 	@AfterMethod
 	public void closeBrowser() throws InterruptedException
 	{
-		 Thread.sleep(500);
+		 Thread.sleep(1000);
 		 
 		 chroDriver.close();
 	}
-	
-	
 
 }

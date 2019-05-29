@@ -1,6 +1,8 @@
 package sumitYTFramwork;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /*-- TEST CASE -- 
  * 1. open browser
@@ -26,11 +28,13 @@ public class TC1  extends Sumit_YTFrameBaseClass
 	@Test
 	public void singinTrending()
 	{
-		Sumit_YTFLogin singin = new Sumit_YTFLogin(chroDriver);
+		Sumit_YTFLogin singin = new Sumit_YTFLogin(chroDriver, pr);
 		
 		singin.youtubLogin("sumit@docquity.com", "Docquitysumit#8090");
         
-		chroDriver.findElement(By.linkText("Trending")).click();
+		WebElement trend_Option= chroDriver.findElement(By.linkText(pr.getProperty("trendingOption")));
+		
+		trend_Option.click();
 		
 	}
 	

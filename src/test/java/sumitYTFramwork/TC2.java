@@ -1,6 +1,7 @@
 package sumitYTFramwork;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -32,16 +33,18 @@ import sumitYTFramworkpages.Sumit_YTFLogin;
 public class TC2  extends Sumit_YTFrameBaseClass
 {	
 	@Test
-	public void clickSubscribeButtonaftersignin() throws InterruptedException
+	public void clickSubscribeButtonaftersignin() 
 	{
 		
 			
-			Sumit_YTFLogin signIn = new Sumit_YTFLogin(chroDriver);
+			Sumit_YTFLogin signIn = new Sumit_YTFLogin(chroDriver, pr);
 		
 			signIn.youtubLogin("sumitk440@gmail.com", "SKumiatr@#170690");
 		
 			chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			chroDriver.findElement(By.xpath("//yt-formatted-string[@class='style-scope ytd-subscribe-button-renderer'][1]")).click();
+		//	WebElement Click_subscribeButton= chroDriver.findElement(By.xpath("//yt-formatted-string[@class='style-scope ytd-subscribe-button-renderer'][1]"));
+			WebElement Click_subscribeButton= chroDriver.findElement(By.xpath(pr.getProperty("SubscribeButton")));
+			Click_subscribeButton.click();
 			
 			System.out.println("Subscribe button click successfully");
 			

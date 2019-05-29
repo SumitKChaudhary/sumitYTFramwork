@@ -2,6 +2,7 @@ package sumitYTFramwork;
 
  
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -23,15 +24,19 @@ public class TC3  extends Sumit_YTFrameBaseClass
 {
 	
 	@Test
-	public void playVideoTest()
+	public void likeVideo()
 	{
-			Sumit_YTFLogin  signIn = new Sumit_YTFLogin(chroDriver);
+			Sumit_YTFLogin  signIn = new Sumit_YTFLogin(chroDriver,pr);
 			
 			signIn.youtubLogin("Sumitk440@gmail.com", "SKumiatr@#170690");
 			
-			Sumit_YTF_VideoPlay video_Play = new Sumit_YTF_VideoPlay(chroDriver);	
+			Sumit_YTF_VideoPlay video_Play = new Sumit_YTF_VideoPlay(chroDriver,pr);	
 			
 			video_Play.videoPlay();
+			
+			WebElement likeButton_Click= chroDriver.findElement(By.xpath(pr.getProperty("videoLike")));
+			
+			likeButton_Click.click();
         
 	}
 
