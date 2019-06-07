@@ -35,7 +35,7 @@ public class Sumit_YTFrameBaseClass
 	@AfterMethod
 	public void closeBrowser() throws InterruptedException
 	{
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 
 		 chroDriver.close();
 	}
