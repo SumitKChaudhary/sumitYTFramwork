@@ -1,5 +1,7 @@
 package sumitYTFramwork;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 
 /* Author 			: 	 Sumit Kumar Chaudhary
@@ -56,7 +58,7 @@ public class TC1  extends Sumit_YTFrameBaseClass
 		
 		String expectedResult = "https://www.youtube.com/feed/trending"; 
 		
-		Assert.assertEquals(chroDriver.getCurrentUrl(), expectedResult, " not Success");
+		AssertJUnit.assertEquals(chroDriver.getCurrentUrl(), expectedResult, " not Success");
 		
 		
 		SumitYTFLogFile.captureLog("TC1", "2. Trend Get click Successfully ");

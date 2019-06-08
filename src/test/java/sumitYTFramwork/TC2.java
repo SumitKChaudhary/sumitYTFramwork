@@ -1,6 +1,7 @@
 package sumitYTFramwork;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import sumitYTFramUtilities.SumitYTFLogFile;
 import sumitYTFramUtilities.TakeScreenShots;
 import org.testng.annotations.Test;
