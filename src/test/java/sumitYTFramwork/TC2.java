@@ -2,9 +2,12 @@ package sumitYTFramwork;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import sumitYTFramUtilities.SumitYTFLogFile;
+import sumitYTFramUtilities.TakeScreenShots;
+import org.testng.annotations.Test;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +21,11 @@ import org.testng.annotations.Test;
 import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
 import sumitYTFramworkpages.Sumit_YTFLogin;
 
+/* Author 			: 	 Sumit Kumar Chaudhary
+ * Class			:	 Login on youtube and click on subscribe button
+ * Date of creation	:	 7 June 2019 
+ * 
+ * */
 /*-- TEST CASE -- 
  * 1. open browser
  * 2. hite the youtube URL in the address bar
@@ -33,20 +41,26 @@ import sumitYTFramworkpages.Sumit_YTFLogin;
 public class TC2  extends Sumit_YTFrameBaseClass
 {	
 	@Test
-	public void clickSubscribeButtonaftersignin() 
+	public void clickSubscribeButtonaftersignin() throws IOException 
 	{
 		
 			
 			Sumit_YTFLogin signIn = new Sumit_YTFLogin(chroDriver, pr);
 		
-			signIn.youtubLogin("sumitk440@gmail.com", "SKumiatr@#170690");
+			signIn.youtubLogin(pr.getProperty("email_Id"), pr.getProperty("password"));
+
+			SumitYTFLogFile.captureLog("TC2", " 1. Login SuccessFully");
 		
 			chroDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		//	WebElement Click_subscribeButton= chroDriver.findElement(By.xpath("//yt-formatted-string[@class='style-scope ytd-subscribe-button-renderer'][1]"));
+		
 			WebElement Click_subscribeButton= chroDriver.findElement(By.xpath(pr.getProperty("SubscribeButton")));
 			Click_subscribeButton.click();
 			
-			System.out.println("Subscribe button click successfully");
+			SumitYTFLogFile.captureLog("TC2", " 2. Subscribe button gets click successfully");
+			
+			TakeScreenShots.shreenShots(chroDriver, "../YTFramework/MyScreenShotes/ClickSubscribeButton.jpg");
+			
+			SumitYTFLogFile.captureLog("TC2",  "3. Screen get Tacked");
 			
 	}
 	

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-05-29T19:55:26Z" name="Default suite" finished-at="2019-05-29T19:55:42Z" duration-ms="16626">
+  <suite started-at="2019-06-07T17:49:02Z" name="Default suite" finished-at="2019-06-07T17:49:27Z" duration-ms="24368">
     <groups>
     </groups>
-    <test started-at="2019-05-29T19:55:26Z" name="Default test" finished-at="2019-05-29T19:55:42Z" duration-ms="16626">
-      <class name="sumitYTFramwork.TC4">
-        <test-method is-config="true" signature="browserLaunce()[pri:0, instance:sumitYTFramwork.TC4@7c1e2a9e]" started-at="2019-05-29T19:55:26Z" name="browserLaunce" finished-at="2019-05-29T19:55:32Z" duration-ms="6224" status="PASS">
+    <test started-at="2019-06-07T17:49:02Z" name="Default test" finished-at="2019-06-07T17:49:27Z" duration-ms="24368">
+      <class name="sumitYTFramwork.TC1">
+        <test-method is-config="true" signature="browserLaunce()[pri:0, instance:sumitYTFramwork.TC1@3f56875e]" started-at="2019-06-07T17:49:02Z" name="browserLaunce" finished-at="2019-06-07T17:49:13Z" duration-ms="10238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunce -->
-        <test-method signature="channelSubscribtion()[pri:0, instance:sumitYTFramwork.TC4@7c1e2a9e]" started-at="2019-05-29T19:55:32Z" name="channelSubscribtion" finished-at="2019-05-29T19:55:41Z" duration-ms="9101" status="PASS">
+        <test-method signature="singinTrending()[pri:0, instance:sumitYTFramwork.TC1@3f56875e]" started-at="2019-06-07T17:49:13Z" name="singinTrending" finished-at="2019-06-07T17:49:25Z" duration-ms="11950" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- channelSubscribtion -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:sumitYTFramwork.TC4@7c1e2a9e]" started-at="2019-05-29T19:55:41Z" name="closeBrowser" finished-at="2019-05-29T19:55:42Z" duration-ms="1260" status="PASS">
+        </test-method> <!-- singinTrending -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:sumitYTFramwork.TC1@3f56875e]" started-at="2019-06-07T17:49:25Z" name="closeBrowser" finished-at="2019-06-07T17:49:27Z" duration-ms="2154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- sumitYTFramwork.TC4 -->
+      </class> <!-- sumitYTFramwork.TC1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
