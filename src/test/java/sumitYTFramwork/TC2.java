@@ -1,6 +1,9 @@
 package sumitYTFramwork;
 
 import org.testng.annotations.Test;
+
+import sumitYTFAssert.YTFAssertion;
+
 import org.testng.annotations.Test;
 import sumitYTFramUtilities.SumitYTFLogFile;
 import sumitYTFramUtilities.TakeScreenShots;
@@ -21,11 +24,12 @@ import org.testng.annotations.Test;
 import sumitYTFramworkBase.Sumit_YTFrameBaseClass;
 import sumitYTFramworkpages.Sumit_YTFLogin;
 
-/* Author 			: 	 Sumit Kumar Chaudhary
- * Class			:	 Login on youtube and click on subscribe button
- * Date of creation	:	 7 June 2019 
- * 
- * */
+
+/* Author 		:		Sumit Kumar Chaudhary
+ * Class		:		TC2 
+ * Purpose		:		Click on Subscribe button after login on youtube 
+ * Date			:		7 June 2019 
+ * Project		:		Youtube Automation 
 /*-- TEST CASE -- 
  * 1. open browser
  * 2. hite the youtube URL in the address bar
@@ -55,6 +59,16 @@ public class TC2  extends Sumit_YTFrameBaseClass
 		
 			WebElement Click_subscribeButton= chroDriver.findElement(By.xpath(pr.getProperty("SubscribeButton")));
 			Click_subscribeButton.click();
+			
+			//Define expected toast message which will get after click on subscribe button
+			String expecteMessage= "Subscription added";
+			
+			//Get the Actual toast Message which get after click subscribe Button
+			String actualMessage= chroDriver.findElement(By.xpath("//span[@id='label']")).getText();
+			
+			//Using here soft assertion boolean methods which created in sumitYTFAssert package 
+			//Their i compare the actual and expected result and print the message
+			YTFAssertion.ytfAssert(expecteMessage, actualMessage, true);
 			
 			SumitYTFLogFile.captureLog("TC2", " 2. Subscribe button gets click successfully");
 			
