@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [myYutubeFrameWordSuite]">
+  <test thread-count="5" name="Command line test 3d38ac74-7a43-4503-96ef-87a1617cd021(failed)">
+    <classes>
+      <class name="sumitYTFramwork.TC1">
+        <methods>
+          <include name="singinTrending"/>
+          <include name="browserLaunce"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- sumitYTFramwork.TC1 -->
+    </classes>
+  </test> <!-- Command line test 3d38ac74-7a43-4503-96ef-87a1617cd021(failed) -->
+</suite> <!-- Failed suite [myYutubeFrameWordSuite] -->
