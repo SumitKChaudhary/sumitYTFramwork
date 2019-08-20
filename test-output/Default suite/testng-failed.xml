@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sumitYTFramwork.TC2">
+      <class name="sumitYTFramwork.TC4">
         <methods>
           <include name="browserLaunce"/>
           <include name="closeBrowser"/>
-          <include name="clickSubscribeButtonaftersignin"/>
+          <include name="channelSubscribtion"/>
         </methods>
-      </class> <!-- sumitYTFramwork.TC2 -->
+      </class> <!-- sumitYTFramwork.TC4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

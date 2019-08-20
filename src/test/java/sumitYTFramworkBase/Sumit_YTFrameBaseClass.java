@@ -17,7 +17,7 @@ public class Sumit_YTFrameBaseClass
 	@BeforeMethod
 	public void browserLaunce() throws IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "/Users/sumitkumar/Downloads/chrom/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "../Midtrans/Libs/chromedriver");
 		
 		chroDriver = new ChromeDriver();
 		chroDriver.get("http://www.youtube.com/");
