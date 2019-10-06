@@ -70,10 +70,6 @@ public class TC4 extends Sumit_YTFrameBaseClass
 		{
 			System.out.println("Subscribe button element not found please check the element value");
 		}
-		
-		
-		  
-		
 		  
 	}
 

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sumitYTFramwork.TC1">
+      <class name="sumitYTFramwork.TC5_MultipleVideoPlay">
         <methods>
-          <include name="singinTrending"/>
           <include name="browserLaunce"/>
           <include name="closeBrowser"/>
+          <include name="playYoutubeMultipleVideos"/>
         </methods>
-      </class> <!-- sumitYTFramwork.TC1 -->
+      </class> <!-- sumitYTFramwork.TC5_MultipleVideoPlay -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
