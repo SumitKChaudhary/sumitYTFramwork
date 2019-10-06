@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [MY Yutube FrameWord Suite]">
-  <test thread-count="5" name="Command line test 5cfc8b3f-72a5-413c-bf03-57365d5e1c9b(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="sumitYTFramwork.TC1">
         <methods>
@@ -11,5 +11,5 @@
         </methods>
       </class> <!-- sumitYTFramwork.TC1 -->
     </classes>
-  </test> <!-- Command line test 5cfc8b3f-72a5-413c-bf03-57365d5e1c9b(failed) -->
-</suite> <!-- Failed suite [MY Yutube FrameWord Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

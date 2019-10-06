@@ -29,7 +29,7 @@ public class SumitYTFRunnerClass
 		
 		XmlTest testObject = new XmlTest(suiteObject); //Test Object
 		
-		File testCaseInputFile = new File("../YTFramework/TestCaseInputFile/YoutubeAutomationTestCase.xls"); //test Case file
+		File testCaseInputFile = new File("../sumitYTFramwork/TestCaseInputFile/YoutubeAutomationTestCase.xls"); //test Case file
 		
 		Workbook myWorkbook = Workbook.getWorkbook(testCaseInputFile);
 		

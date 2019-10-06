@@ -15,7 +15,7 @@ public class SumitYTFLogFile
 	public static void captureLog(String className, String logMessage)
 	{
 		// Cofigure the log setting file 
-		DOMConfigurator.configure("../YTFramework/LogCaptureFile.xml");
+		DOMConfigurator.configure("../sumitYTFramwork/LogCaptureFile.xml");
 		
 		//Take Appache 4G logger class's get logger static method. 
 		

@@ -43,8 +43,6 @@ public class TC1  extends Sumit_YTFrameBaseClass
 		singin.youtubLogin(pr.getProperty("email_Id"), pr.getProperty("password"));
 
 		SumitYTFLogFile.captureLog("TC1", " 1. Login SuccessFully");
-		
-		
 
 		WebElement trend_Option= chroDriver.findElement(By.linkText(pr.getProperty("trendingOption")));
 		
@@ -59,7 +57,7 @@ public class TC1  extends Sumit_YTFrameBaseClass
 		
 		SumitYTFLogFile.captureLog("TC1", "2. Trend Get click Successfully ");
 		
-		TakeScreenShots.shreenShots(chroDriver, "../YTFramework/MyScreenShotes/TrendsClick.png");
+		TakeScreenShots.shreenShots(chroDriver, "../sumitYTFramwork/MyScreenShotes/TrendingClick.jpg");
 		
 		SumitYTFLogFile.captureLog("TC1", "3. Screen shots Take Successfully");
 		
