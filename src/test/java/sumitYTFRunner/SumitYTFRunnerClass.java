@@ -25,7 +25,7 @@ public class SumitYTFRunnerClass
 	public static void main(String[] args) throws BiffException, IOException 
 	{
 		XmlSuite  suiteObject = new XmlSuite(); // suit Object
-		suiteObject.setName("MY Yutube FrameWord Suite"); // Name Set
+		suiteObject.setName("MY Youtube FrameWord Suite"); // Name Set
 		
 		XmlTest testObject = new XmlTest(suiteObject); //Test Object
 		
